@@ -14,7 +14,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrime(1);
+        boolean prime = primeChecker.isPrimeUsingForLoop(1);
     //THen
         assertThat(prime, is(true));
     }
@@ -26,7 +26,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrime(2);
+        boolean prime = primeChecker.isPrimeUsingForLoop(2);
     //THen
         assertThat(prime, is(true));
     }
@@ -38,7 +38,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrime(3);
+        boolean prime = primeChecker.isPrimeUsingForLoop(3);
     //THen
         assertThat(prime, is(true));
     }
@@ -50,7 +50,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrime(4);
+        boolean prime = primeChecker.isPrimeUsingForLoop(4);
     //THen
         assertThat(prime, is(false));
     }
@@ -61,9 +61,21 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrime(5);
+        boolean prime = primeChecker.isPrimeUsingForLoop(5);
     //THen
         assertThat(prime, is(true));
+    }
+
+    @Test
+    public void shouldVerifySixAsNonPrimeNumber(){
+    //Given
+         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+    //When
+
+
+        boolean prime = primeChecker.isPrimeUsingForLoop(6);
+    //THen
+        assertThat(prime, is(false));
     }
 
 
