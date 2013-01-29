@@ -34,7 +34,13 @@ public class PrimeNumberChecker {
         return true;
     }
 
-
+    /**
+     * We Don't need to iterate all the way to the number being checked for prime.
+     * We can only check half of the number as all the even numbers are divisible by 2.
+     * If we can find a divisor of n between 1 and n/2, then it can't be prime number.
+     * @param number
+     * @return
+     */
     public boolean isPrimeMoreEffective(int number) {
 
 
@@ -42,7 +48,7 @@ public class PrimeNumberChecker {
             return true;
 
         }
-        System.out.println(number +"/ 2 : " + number/2);
+
         for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
                 return false;
