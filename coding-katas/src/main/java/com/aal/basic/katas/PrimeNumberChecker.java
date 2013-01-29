@@ -19,6 +19,12 @@ public class PrimeNumberChecker {
         return true;
     }
 
+    /**
+     * This is just to translate to use the for loop, no change in logic.
+     * @param number
+     * @return
+     */
+
     public boolean isPrimeUsingForLoop(int number) {
 
 
@@ -38,6 +44,7 @@ public class PrimeNumberChecker {
      * We Don't need to iterate all the way to the number being checked for prime.
      * We can only check half of the number as all the even numbers are divisible by 2.
      * If we can find a divisor of n between 1 and n/2, then it can't be prime number.
+     *
      * @param number
      * @return
      */
@@ -58,5 +65,27 @@ public class PrimeNumberChecker {
         return true;
     }
 
+    /** if n is a not a prime number then it can be represented as x * y = n.
+     *
+     * if x can't be greater than Sqrt(n), which would mean y is < Sqrt(n).
+     *
+     * @param number
+     * @return
+     */
+
+    public boolean isPrimeUsingSqrt(int number) {
+
+        if (number <= 2) {
+            return true;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
 
 }

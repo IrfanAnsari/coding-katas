@@ -1,20 +1,26 @@
 package com.aal.basic.katas;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class PrimeNumberCheckerTest {
+    PrimeNumberChecker primeChecker;
+    @Before
+    public void setUp(){
+       primeChecker = new PrimeNumberChecker();
 
+    }
     @Test
     public void shouldVerifyOneAsAPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+
     //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(1);
+        boolean prime = primeChecker.isPrimeUsingSqrt(1);
     //THen
         assertThat(prime, is(true));
     }
@@ -22,11 +28,11 @@ public class PrimeNumberCheckerTest {
     @Test
     public void shouldVerifyTwoAsAPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+
     //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(2);
+        boolean prime = primeChecker.isPrimeUsingSqrt(2);
     //THen
         assertThat(prime, is(true));
     }
@@ -38,7 +44,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(3);
+        boolean prime = primeChecker.isPrimeUsingSqrt(3);
     //THen
         assertThat(prime, is(true));
     }
@@ -46,22 +52,20 @@ public class PrimeNumberCheckerTest {
     @Test
     public void shouldVerifyFourAsNonPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
-    //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(4);
+
+        boolean prime = primeChecker.isPrimeUsingSqrt(4);
     //THen
         assertThat(prime, is(false));
     }
      @Test
     public void shouldVerifyFiveAsPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
-    //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(5);
+
+        boolean prime = primeChecker.isPrimeUsingSqrt(5);
     //THen
         assertThat(prime, is(true));
     }
@@ -69,11 +73,11 @@ public class PrimeNumberCheckerTest {
     @Test
     public void shouldVerifySixAsNonPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+
     //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(6);
+        boolean prime = primeChecker.isPrimeUsingSqrt(6);
     //THen
         assertThat(prime, is(false));
     }
@@ -81,11 +85,11 @@ public class PrimeNumberCheckerTest {
     @Test
     public void shouldVerifyTwnetyNineAsPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+
     //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(29);
+        boolean prime = primeChecker.isPrimeUsingSqrt(29);
     //THen
         assertThat(prime, is(true));
     }
@@ -93,11 +97,11 @@ public class PrimeNumberCheckerTest {
     @Test
     public void shouldVerifyThirtyAsNonPrimeNumber(){
     //Given
-         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+
     //When
 
 
-        boolean prime = primeChecker.isPrimeMoreEffective(30);
+        boolean prime = primeChecker.isPrimeUsingSqrt(30);
     //THen
         assertThat(prime, is(false));
     }
