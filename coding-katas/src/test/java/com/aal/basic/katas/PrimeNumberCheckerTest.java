@@ -14,7 +14,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingForLoop(1);
+        boolean prime = primeChecker.isPrimeMoreEffective(1);
     //THen
         assertThat(prime, is(true));
     }
@@ -26,7 +26,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingForLoop(2);
+        boolean prime = primeChecker.isPrimeMoreEffective(2);
     //THen
         assertThat(prime, is(true));
     }
@@ -38,7 +38,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingForLoop(3);
+        boolean prime = primeChecker.isPrimeMoreEffective(3);
     //THen
         assertThat(prime, is(true));
     }
@@ -50,7 +50,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingForLoop(4);
+        boolean prime = primeChecker.isPrimeMoreEffective(4);
     //THen
         assertThat(prime, is(false));
     }
@@ -61,7 +61,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingForLoop(5);
+        boolean prime = primeChecker.isPrimeMoreEffective(5);
     //THen
         assertThat(prime, is(true));
     }
@@ -73,7 +73,31 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingForLoop(6);
+        boolean prime = primeChecker.isPrimeMoreEffective(6);
+    //THen
+        assertThat(prime, is(false));
+    }
+
+    @Test
+    public void shouldVerifyTwnetyNineAsPrimeNumber(){
+    //Given
+         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+    //When
+
+
+        boolean prime = primeChecker.isPrimeMoreEffective(29);
+    //THen
+        assertThat(prime, is(true));
+    }
+
+    @Test
+    public void shouldVerifyThirtyAsNonPrimeNumber(){
+    //Given
+         PrimeNumberChecker primeChecker = new PrimeNumberChecker();
+    //When
+
+
+        boolean prime = primeChecker.isPrimeMoreEffective(30);
     //THen
         assertThat(prime, is(false));
     }
