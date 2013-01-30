@@ -1,4 +1,4 @@
-package com.aal.basic.katas;
+package com.aal.basic.katas.primenumber;
 
 public class PrimeNumberChecker {
     public boolean isPrime(int number) {

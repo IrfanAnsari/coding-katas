@@ -1,5 +1,6 @@
-package com.aal.basic.katas;
+package com.aal.basic.katas.primenumber;
 
+import com.aal.basic.katas.primenumber.PrimeNumberChecker;
 import org.junit.Before;
 import org.junit.Test;
 
