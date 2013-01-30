@@ -1,7 +1,7 @@
 package com.aal.basic.katas.swapvalue;
 
+import org.junit.Before;
 import org.junit.Test;
-import sun.awt.SunHints;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -13,10 +13,17 @@ import static org.junit.Assert.assertThat;
  */
 public class SwapVariableValueTest {
 
+    private ValueSwaper valueSwaper;
+
+    @Before
+    public void setUp(){
+           valueSwaper = new ValueSwaper();
+    }
+
     @Test
     public void shouldSwapTheValueOfVariables(){
     //Given
-        ValueSwaper valueSwaper = new ValueSwaper();
+
     //When
         NameValue nameValue1 = new NameValue("var1", 3);
         NameValue nameValue2 = new NameValue("var2", 5);
@@ -31,7 +38,6 @@ public class SwapVariableValueTest {
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowIllegalArgumentExceptionForBigNumbers(){
     //Given
-        ValueSwaper valueSwaper = new ValueSwaper();
     //When
         NameValue nameValue1 = new NameValue("var1", Integer.MAX_VALUE/2);
         NameValue nameValue2 = new NameValue("var2", Integer.MAX_VALUE/2);
