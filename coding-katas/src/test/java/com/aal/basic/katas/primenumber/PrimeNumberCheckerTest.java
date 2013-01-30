@@ -21,7 +21,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(1);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(1);
     //THen
         assertThat(prime, is(true));
     }
@@ -33,7 +33,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(2);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(2);
     //THen
         assertThat(prime, is(true));
     }
@@ -45,7 +45,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(3);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(3);
     //THen
         assertThat(prime, is(true));
     }
@@ -56,7 +56,7 @@ public class PrimeNumberCheckerTest {
 
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(4);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(4);
     //THen
         assertThat(prime, is(false));
     }
@@ -66,7 +66,7 @@ public class PrimeNumberCheckerTest {
 
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(5);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(5);
     //THen
         assertThat(prime, is(true));
     }
@@ -78,7 +78,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(6);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(6);
     //THen
         assertThat(prime, is(false));
     }
@@ -90,7 +90,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(29);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(29);
     //THen
         assertThat(prime, is(true));
     }
@@ -102,7 +102,7 @@ public class PrimeNumberCheckerTest {
     //When
 
 
-        boolean prime = primeChecker.isPrimeUsingSqrt(30);
+        boolean prime = primeChecker.isPrimeWithImprovedLoop(30);
     //THen
         assertThat(prime, is(false));
     }
