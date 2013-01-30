@@ -22,7 +22,7 @@ public class FibonacciNumberGeneratorTest {
         //Given
 
         //When
-        int firstFibonacciNumber = numberGenerator.fibonacciUsingLoop(0);
+        int firstFibonacciNumber = numberGenerator.improvedFibo(0);
         //THen
         assertThat(firstFibonacciNumber, is(0));
     }
@@ -32,7 +32,7 @@ public class FibonacciNumberGeneratorTest {
         //Given
 
         //When
-        int firstFibonacciNumber = numberGenerator.fibonacciUsingLoop(1);
+        int firstFibonacciNumber = numberGenerator.improvedFibo(1);
         //THen
         assertThat(firstFibonacciNumber, is(1));
     }
@@ -42,7 +42,7 @@ public class FibonacciNumberGeneratorTest {
         //Given
 
         //When
-        int firstFibonacciNumber = numberGenerator.fibonacciUsingLoop(2);
+        int firstFibonacciNumber = numberGenerator.improvedFibo(2);
         //THen
         assertThat(firstFibonacciNumber, is(1));
     }
@@ -52,7 +52,7 @@ public class FibonacciNumberGeneratorTest {
         //Given
 
         //When
-        int firstFibonacciNumber = numberGenerator.fibonacciUsingLoop(3);
+        int firstFibonacciNumber = numberGenerator.improvedFibo(3);
         //THen
         assertThat(firstFibonacciNumber, is(2));
     }
@@ -62,7 +62,7 @@ public class FibonacciNumberGeneratorTest {
         //Given
 
         //When
-        int firstFibonacciNumber = numberGenerator.fibonacciUsingLoop(5);
+        int firstFibonacciNumber = numberGenerator.improvedFibo(5);
         //THen
         assertThat(firstFibonacciNumber, is(5));
     }
@@ -72,7 +72,7 @@ public class FibonacciNumberGeneratorTest {
         //Given
 
         //When
-        int firstFibonacciNumber = numberGenerator.fibonacciUsingLoop(6);
+        int firstFibonacciNumber = numberGenerator.improvedFibo(6);
         //THen
         assertThat(firstFibonacciNumber, is(8));
     }
@@ -84,7 +84,7 @@ public class FibonacciNumberGeneratorTest {
 
         //When
         for (int i = 0; i <= 20; i++) {
-            System.out.print(numberGenerator.fibonacciUsingLoop(i) + ", ");
+            System.out.print(numberGenerator.improvedFibo(i) + ", ");
         }
         //THen
 
