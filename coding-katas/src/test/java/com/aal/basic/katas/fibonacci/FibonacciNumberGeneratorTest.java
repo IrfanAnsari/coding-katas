@@ -1,4 +1,4 @@
-package com.aal.basic.katas;
+package com.aal.basic.katas.fibonacci;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

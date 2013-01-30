@@ -1,4 +1,4 @@
-package com.aal.basic.katas;
+package com.aal.basic.katas.fibonacci;
 
 import java.util.HashMap;
 import java.util.Map;
